@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Drill 1</title>
+  <style>
+    body {
+      background-color: #ffd6e8; /* baby pink */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+    }
+    .calculator-box {
+      background: #ffb6c1; /* light pink */
+      padding: 25px 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(255, 182, 193, 0.4);
+      width: 280px;
+      text-align: center;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    p {
+      margin: 12px 0 5px;
+      font-weight: 600;
+    }
+    input {
+      width: 100%;
+      padding: 7px 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+    input::placeholder {
+      color: #ffe6f0;
+    }
+    button {
+      background-color: white;
+      color: #ff69b4; /* hot pink */
+      border: none;
+      padding: 10px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background-color 0.3s ease;
+      width: 100%;
+      font-size: 1em;
+    }
+    button:hover {
+      background-color: #ff8dbd;
+      color: white;
+    }
+    #average, #result {
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator-box">
+    <h2>Simple Average Calculator</h2>
+
+    <p>Score 1:</p>
+    <input id="score1" type="text" placeholder="Enter score 1" />
+
+    <p>Score 2:</p>
+    <input id="score2" type="text" placeholder="Enter score 2" />
+
+    <button py-click="compute_average">COMPUTE</button>
+
+    <p>Average: <span id="average"></span></p>
+    <p>Passed? <span id="result"></span></p>
+  </div>
+
+  <script type="py" src="main.py"></script>
+</body>
+</html>
